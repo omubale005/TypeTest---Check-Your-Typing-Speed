@@ -203,7 +203,10 @@ typingInput.addEventListener('input', handleInput);
 typingInput.addEventListener('paste', (e) => e.preventDefault());
 tryAgainBtn.addEventListener('click', closeResults);
 
-// Initialize the app when page loads
-document.addEventListener('DOMContentLoaded', () => {
-   loadNewText();
-});
+// Initialize the app (works whether script is loaded before or after DOM)
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', loadNewText);
+} else {
+  loadNewText();
+}
+
