@@ -54,12 +54,23 @@ margin-bottom: 48px;
 }
 
 .stat-card {
-background: #1a1a1a;
 border: 1px solid #333333;
 border-radius: 12px;
 padding: 24px;
 text-align: center;
 transition: all 0.2s ease;
+}
+
+.stat-card.wpm{
+    background-color: #f79504;
+}
+
+.stat-card.accuracy{
+    background-color: #215594;
+}
+
+.stat-card.characters{
+    background-color: #085639;
 }
 
 .stat-card:hover {
@@ -69,7 +80,7 @@ transform: translateY(-2px);
 
 .stat-icon {
 font-size: 1.5rem;
-color: #666666;
+color: /*#666666*/ #ffffff;
 margin-bottom: 12px;
 display: block;
 }
@@ -84,7 +95,7 @@ line-height: 1;
 
 .stat-label {
 font-size: 0.875rem;
-color: #888888;
+color: /*#888888*/#ffffff;
 text-transform: uppercase;
 letter-spacing: 0.05em;
 font-weight: 500;
